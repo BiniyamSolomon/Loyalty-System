@@ -1,0 +1,28 @@
+- make hibernate to update from validate inorder to allow hibernate handle creation of tables
+
+- these two lines are added to enable mysql logging
+            jpa:
+              default:
+                packages-to-scan:
+                  - com.example
+                entity-scan:
+                  packages:
+                    - com.example
+                properties:
+                  hibernate:
+                    hbm2ddl:
+                      auto: validate
+                      show_sql: true
+                      format_sql: true
+
+
+- create dao for all customers, merchants and transaction
+- create service class for all
+
+
+- java prefers camelcase naming convention while mysql snake case naming convension so
+    that is why we give a different name using like @Column(name="falda")
+
+
+
+condition ? value_if_true : value_if_false;
